@@ -1,0 +1,137 @@
+.container{
+    width:530px;
+    height:700px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    // justify-content: center;
+    // align-items: start;
+    flex-wrap: wrap;
+    margin-left: 25%;
+    flex-direction:row;
+    position: relative;
+    left: -133px;
+
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 90%;
+}
+
+.text{
+
+margin-left: 215px;
+font-size: 20px;
+font-weight: bold;
+// margin-top: 0;
+margin-bottom: 0;
+}
+
+
+.labell{
+  margin-top: 20px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.box{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+  margin-top:0px;
+  margin-left: 50px;
+ 
+}
+
+  .example-full-width{
+    width: 90%;
+    height: 60px;
+  }
+
+//password
+  .example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+
+  .example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+ 
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  .size{
+    width: 200px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+   .box2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 30px;
+   }
+  
+
+.size{
+  width: 200px;
+  height: 78px;
+  
+}
+
+section {
+  display: table;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+  
+}
+
+.btn{
+  margin-left: 130px;
+  background-color: black;
+  color: white;
+}
+.mat-mdc-raised-button:not(:disabled){
+  background-color: black;
+}
+.mat-mdc-raised-button.mat-unthemed{
+  color: white;
+}
+
+

@@ -1,0 +1,114 @@
+<div class="container"><p class="text">فرم ثبت نام</p>
+    <div class="box" dir="rtl">
+
+      <mat-label class="labell">نام خانوادگی : </mat-label>
+      <mat-form-field appearance="fill" class="size">
+        <mat-label>نام خانوادگی</mat-label>
+        <input matInput  [(ngModel)]="item.LastName" required="">
+      </mat-form-field>
+
+        <mat-label class="labell">  رمز عبور :</mat-label>
+        <mat-form-field appearance="fill" class="size">
+          <mat-label>رمز عبور خود را وارد کنید</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'"  [(ngModel)]="item.password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        
+        <mat-label class="labell">تولد : </mat-label>
+        <mat-form-field appearance="fill" class="size">
+          <mat-label>تاریخ تولد</mat-label>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="item.Gender">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-label class="labell">شهرستان : </mat-label>
+        <mat-form-field appearance="fill" class="size">
+          <mat-label>شهرستان</mat-label>
+          <mat-select [(ngModel)]="item.city">
+            <mat-option value="one">شاهین شهر</mat-option>
+            <mat-option value="two">ری</mat-option>
+            <mat-option value="two">مرند</mat-option>
+            <mat-option value="two">میبد</mat-option>
+            <mat-option value="two">جهرم</mat-option>
+            
+          </mat-select>
+        </mat-form-field>
+    
+
+
+  
+
+    </div>
+  
+    
+    <div class="box2"  dir="rtl">
+      <mat-label class="labell">نام : </mat-label>
+      <mat-form-field appearance="fill" class="size">
+        <mat-label >نام</mat-label>
+        <input matInput  [(ngModel)]="item.name">
+      </mat-form-field>
+  
+        <mat-label class="labell"> ایمیل : </mat-label>
+        <div class="example-container">
+          <mat-form-field appearance="fill" class="size">
+            <mat-label>ایمیل خود را وارد کنید</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required [(ngModel)]="item.Email">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+  
+      <mat-label class="labell">جنسیت : </mat-label>
+      <mat-form-field appearance="fill" class="size">
+        <mat-label>جنسیت</mat-label>
+        <mat-select [(ngModel)]="item.Gender">
+          <mat-option value="one">مرد</mat-option>
+          <mat-option value="two">زن</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+  
+      <mat-label class="labell">استان : </mat-label>
+      <mat-form-field appearance="fill" class="size">
+        <mat-label>استان</mat-label>
+        <mat-select [(ngModel)]="item.State">
+          <mat-option value="one">اصفهان</mat-option>
+          <mat-option value="two">تهران</mat-option>
+          <mat-option value="two">تبریز</mat-option>
+          <mat-option value="two">یزد</mat-option>
+          <mat-option value="two">شیراز</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+  
+     
+  </div>
+  
+  <section>
+    <div class="example-button-row"> 
+      <!-- <div mat-dialog-actions> -->
+  <button   mat-raised-button  class="btn" (click)="onNoClick()">انصراف </button>
+  <button   mat-raised-button  class="btn" cdkFocusInitial>ثبت نام</button>
+   </div>
+    <!-- </div> -->
+  </section>
+
+<!-- 
+  <h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field> -->
+</div>
+
+<!-- [mat-dialog-close]="data.animal"  -->
+  <!-- </div> -->
+ 
+
+
+
+  
